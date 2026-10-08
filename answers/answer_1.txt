@@ -1,0 +1,1 @@
+Answer: There are three bugs in the function. If you've fixed them, all your tests should pass. If you don't manage, that's okay - we provide you with the fixed function for the rest of the practical.
