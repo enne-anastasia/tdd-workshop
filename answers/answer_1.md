@@ -1,0 +1,3 @@
+### Answer 1
+
+There are three bugs in the function. The first one is in the splitting character used to separate the alleles within an individual genotype (it should be `""`, not `" "`). The second one is in the check performed to know if a genotype is heterozygous (the exclamation mark should be removed at the beginning and the `==` should be replaced with `!=`). The third one is in the denominator of the inbreeding coefficient at the very end (it should be `He` and not `Ho`). If you've fixed them, all your tests should pass. If you don't manage, that's okay - we provide you with the fixed function for the rest of the practical.

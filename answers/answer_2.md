@@ -1,0 +1,3 @@
+### Answer 2
+
+The new tests are wrong. The intuition of the programmer must have been that a population consisting of a single genotype should be maximally inbred, and therefore have an inbreeding coefficient of one. However, mathematically the inbreeding coefficient is simply not defined in such a case, because then the denominator (the heterozygosity) is zero. One solution to this problem would be to adapt the test, and instead check that the output is "not a number" (NaN) - you can use `expect_true(is.nan(...))` for that. Tests are here to help, but they too can be wrong!
