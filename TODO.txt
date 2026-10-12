@@ -1,7 +1,0 @@
-Things to do
-
-* Move exercise 5 before 4
-* Cheat sheet for functions or do it interactively with the students
-* Rename folders
-* Code coverage in presentation
-* Shorten presentation: no need for many things
