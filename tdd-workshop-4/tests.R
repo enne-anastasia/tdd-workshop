@@ -20,7 +20,7 @@ test_inbreeding_coefficient <- function() {
   expect_error(inbreeding_coefficient(c("AA", "Aa", "Aaa")))
   
   # New misuse case with empty genotype
-  expect_error(inbreeding_coefficient(c("Aa", "AA", ""))) # NEW TEST ADDED
+  expect_error(inbreeding_coefficient(c("", "", ""))) # NEW TEST ADDED
   
 }
 

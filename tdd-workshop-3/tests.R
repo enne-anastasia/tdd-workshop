@@ -16,6 +16,10 @@ test_inbreeding_coefficient <- function() {
   expect_true(is.nan(inbreeding_coefficient(c("AA", "AA", "AA"))))
   expect_true(is.nan(inbreeding_coefficient(c("aa", "aa", "aa"))))
   
+  expect_error(inbreeding_coefficient(c()))
+  expect_error(inbreeding_coefficient(function() {}))
+  expect_error(inbreeding_coefficient(c("A", "aa", "aaa")))
+  
 }
 
 # Hint: The above function is called from another script to run all the tests

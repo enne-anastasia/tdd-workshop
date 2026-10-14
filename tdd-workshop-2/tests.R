@@ -15,8 +15,8 @@ test_inbreeding_coefficient <- function() {
   # NEW TESTS ADDED
   
   # Added tests for single homozygous genotype
-  expect_equal(inbreeding_coefficient(c("AA", "AA", "AA")), 1)
-  expect_equal(inbreeding_coefficient(c("aa", "aa", "aa")), 1)
+  expect_equal(inbreeding_coefficient(c("AA", "AA", "AA")), NaN)
+  expect_equal(inbreeding_coefficient(c("aa", "aa", "aa")), NaN)
   
 }
 

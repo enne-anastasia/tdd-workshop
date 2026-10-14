@@ -31,10 +31,10 @@ inbreeding_coefficient <- function(genotypes) {
   heterozygotes <- sapply(genotypes, function(genotype) {
     
     # Split alleles
-    alleles <- strsplit(genotype, split = " ")[[1]]
+    alleles <- strsplit(genotype, split = "")[[1]]
     
     # Is it heterozygous?
-    return (!any(alleles == alleles[1]))
+    return (any(alleles != alleles[1]))
     
   })
   
@@ -42,6 +42,6 @@ inbreeding_coefficient <- function(genotypes) {
   Ho <- sum(heterozygotes) / length(genotypes)
   
   # Inbreeding
-  return((He - Ho) / Ho)
+  return((He - Ho) / He)
   
 }

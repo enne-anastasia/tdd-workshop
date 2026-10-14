@@ -14,7 +14,7 @@ inbreeding_coefficient <- function(genotypes) {
   nchars <- nchar(genotypes)
   
   # Check ploidy
-  if (all(nchars != nchars[1])) stop("Not all genotypes have the same number of alleles")
+  if (length(unique(nchars))!=1) stop("Not all genotypes have the same number of alleles")
   
   # Extract vector of alleles
   alleles <- unlist(strsplit(genotypes, split = ""))
